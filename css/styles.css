@@ -1,0 +1,65 @@
+html,
+body {
+    width: 100%;
+    height: auto;
+}
+
+
+#butterfly {
+    position: absolute;
+}
+
+#wateringcan {
+    position: absolute;
+    bottom: 15%;
+    left: 40%;
+}
+
+.rotated {
+    transform: rotate(-20deg);
+}
+
+.waterdrop {
+    position: absolute;
+    display: none;
+}
+
+#net {
+    position: relative;
+
+}
+
+.apple {
+    position: absolute;
+    display: none;
+}
+
+#tree {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+
+}
+
+.basket {
+    position: absolute;
+    bottom: 5%;
+    left: 20%;
+}
+
+#basket {
+    z-index: -1;
+}
+
+#basketfront {
+    z-index: 1;
+}
+
+body {
+    margin: 0px;
+    background-image: url("../images/tree.png"), url("../images/grass.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat, repeat-x;
+    background-position: 85% 98%, bottom;
+    overflow: hidden;
+}
