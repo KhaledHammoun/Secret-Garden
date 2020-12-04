@@ -1,4 +1,4 @@
-/*global $: false, document: false, window: false, setTimeout: false, setInterval: false*/
+/*global $: false, document: false, window: fals setTimeout: false, setInterval: false*/
 $(document).ready(function () {
 
     // Net following the mouse move
@@ -131,7 +131,7 @@ var basketPos = $("#basketfront").offset();
 // Moving the apples to the basket when clicked on them.
 $(".apple").on("click", function () {
     $(this).animate({
-        top: basketPos.top - 45,
+        top: basketPos.top,
         left: basketPos.left + (Math.random() * 50),
     }, 2000)
 })
@@ -152,14 +152,26 @@ function applesBackOnTree() {
 }
 
 
+
+
+function cloudsAnimate(item) {
+    $(item).animate({
+        left: (movementRandom()[0])
+    }, 6000).animate({
+        left: 5 + "%"
+    }, 6000);
+}
+
+setInterval(cloudsAnimate, 1000, "#cloud1");
+setInterval(cloudsAnimate, 1000, "#cloud2");
+
 // ChenBen clouds
-var ocloud1 = document.getElementById('cloud1');
+/*var ocloud1 = document.getElementById('cloud1');
 var ocloud2 = document.getElementById('cloud2');
-var timer;
 var speed = 5;
 var dir = true;
-timer = setInterval(function () {
-    if (ocloud1.offsetLeft >= 600) {
+setInterval(function () {    
+    if (ocloud1.offsetLeft >= 700) {
         dir = false;
     }
     if (ocloud1.offsetLeft <= 100) {
@@ -181,4 +193,4 @@ timer = setInterval(function () {
     } else {
         ocloud2.style.left = ocloud2.offsetLeft - speed + 'px';
     }
-}, 50)
+}, 50)*/
