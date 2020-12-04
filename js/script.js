@@ -1,4 +1,4 @@
-/*global $: false, document: false, window: fals setTimeout: false*/
+/*global $: false, document: false, window: false, setTimeout: false, setInterval: false*/
 $(document).ready(function () {
 
     // Net following the mouse move
@@ -150,3 +150,35 @@ function applesBackOnTree() {
         }).fadeIn(3000);
     })
 }
+
+
+// ChenBen clouds
+var ocloud1 = document.getElementById('cloud1');
+var ocloud2 = document.getElementById('cloud2');
+var timer;
+var speed = 5;
+var dir = true;
+timer = setInterval(function () {
+    if (ocloud1.offsetLeft >= 600) {
+        dir = false;
+    }
+    if (ocloud1.offsetLeft <= 100) {
+        dir = true;
+    }
+    if (dir) {
+        ocloud1.style.left = ocloud1.offsetLeft + speed + 'px';
+    } else {
+        ocloud1.style.left = ocloud1.offsetLeft - speed + 'px';
+    }
+    if (ocloud2.offsetLeft >= 600) {
+        dir = false;
+    }
+    if (ocloud2.offsetLeft <= 100) {
+        dir = true;
+    }
+    if (dir) {
+        ocloud2.style.left = ocloud2.offsetLeft + speed + 'px';
+    } else {
+        ocloud2.style.left = ocloud2.offsetLeft - speed + 'px';
+    }
+}, 50)

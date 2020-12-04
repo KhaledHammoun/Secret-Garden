@@ -4,6 +4,15 @@ body {
     height: auto;
 }
 
+#cloud1 {
+    position: absolute;
+}
+
+#cloud2 {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
 
 #butterfly {
     position: absolute;
